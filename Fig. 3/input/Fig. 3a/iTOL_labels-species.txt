@@ -1,0 +1,77 @@
+LABELS	
+SEPARATOR TAB	
+DATA	
+HQB-10	HQB-10 Alkalihalobacillus algicola
+HQB-107	HQB-107 Pseudomonas putida
+HQB-110	HQB-110 Thalassotalea litorea
+HQB-111	HQB-111 Vibrio profundi
+HQB-114	HQB-114 Vibrio astriarenae
+HQB-118	HQB-118 Alkalihalobacillus hwajinpoensis
+HQB-123	HQB-123 Staphylococcus warneri
+HQB-127	HQB-127 Bacillus altitudinis
+HQB-136	HQB-136 Shewanella schlegeliana
+HQB-138	HQB-138 Metabacillus halosaccharovorans
+HQB-150	HQB-150 Thaumasiovibrio sp.
+HQB-152	HQB-152 Sulfitobacter faviae
+HQB-154	HQB-154 HQ336491_s
+HQB-162	HQB-162 Shewanella gelidii
+HQB-171	HQB-171 Vibrio hepatarius
+HQB-172	HQB-172 Alteromonas gracilis
+HQB-174	HQB-174 Vibrio campbellii
+HQB-177	HQB-177 Yoonia maritima
+HQB-179	HQB-179 Parasphingorhabdus flavimaris
+HQB-180	HQB-180 Lacinutrix undariae
+HQB-181	HQB-181 Halobacillus trueperi
+HQB-187	HQB-187 Pseudoalteromonas atlantica
+HQB-19	HQB-19 Vibrio harveyi
+HQB-20	HQB-20 Vibrio chagasii
+HQB-200	HQB-200 Bacillus pacificus
+HQB-21	HQB-21 Vibrio maritimus
+HQB-22	HQB-22 Vibrio parahaemolyticus
+HQB-226	HQB-226 Rheinheimera baltica
+HQB-240	HQB-240 Salinimonas iocasae
+HQB-263	HQB-263 Paenisporosarcina quisquiliarum
+HQB-267	HQB-267 Paracoccus marcusii
+HQB-279	HQB-279 Loktanella salsilacus
+HQB-281	HQB-281 Marinobacter nauticus
+HQB-294	HQB-294 Litoreibacter albidus
+HQB-323	HQB-323 Sulfitobacter donghicola
+HQB-325	HQB-325 Pseudoclavibacter helvolus
+HQB-332	HQB-332 Brachybacterium vulturis
+HQB-34	HQB-34 Pseudoalteromonas spongiae
+HQB-345	HQB-345 Vibrio atypicus
+HQB-347	HQB-347 Neptunomonas phycophila
+HQB-355	HQB-355 Postechiella marina
+HQB-361	HQB-361 Psychrobacter nivimaris
+HQB-372	HQB-372 Psychrobacter piscatorii
+HQB-39	HQB-39 BBSC_s
+HQB-399	HQB-399 Saccharospirillum alexandrii
+HQB-410	HQB-410 Enterovibrio calviensis
+HQB-423	HQB-423 Planococcus donghaensis
+HQB-428	HQB-428 Marinagarivorans algicola
+HQB-429	HQB-429 Pseudomonas laoshanensis
+HQB-440	HQB-440 JQEC_s
+HQB-452	HQB-452 Microbacterium foliorum
+HQB-458	HQB-458 Rhodococcus sovatensis
+HQB-46	HQB-46 Shewanella electrodiphila
+HQB-464	HQB-464 Arthrobacter bussei
+HQB-465	HQB-465 Arenivirga flava
+HQB-471	HQB-471 Photobacterium piscicola
+HQB-473	HQB-473 MRYB_s
+HQB-476	HQB-476 Woeseia oceani
+HQB-484	HQB-484 Niallia oryzisoli 
+HQB-491	HQB-491 Pseudomonas alcaligenes
+HQB-497	HQB-497 Lactococcus chungangensis
+HQB-498	HQB-498 Galactobacter valiniphilus
+HQB-5	HQB-5 Shewanella algae
+HQB-55	HQB-55 Marinomonas posidonica
+HQB-70	HQB-70 Thalassotalea profundi
+HQB-75	HQB-75 Pseudoalteromonas distincta
+HQB-76	HQB-76 Shewanella colwelliana
+HQB-86	HQB-86 Shewanella waksmanii
+HQB-88	HQB-88 Shewanella maritima
+HQB-90	HQB-90 Shewanella atlantica
+HQB-91	HQB-91 Aliivibrio fischeri
+HQB-94	HQB-94 Cytobacillus oceanisediminis
+HQB-99	HQB-99 Priestia aryabhattai
+OP50	Escherichia coli OP50

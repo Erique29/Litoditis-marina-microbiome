@@ -1,0 +1,86 @@
+DATASET_COLORSTRIP																									
+SEPARATOR TAB																									
+BORDER_WIDTH	0.5																								
+COLOR	#bebada																								
+DATASET_LABEL	Family																								
+LEGEND_COLORS	#C5E1A5FF	#AED581FF	#D95204FF	#9CCC65FF	#8BC34AFF	#9E9D24FF	#7CB342FF	#4F94CD	#689F38FF	#AFB42BFF	#C0CA33FF	#558B2FFF	#DCE775FF	#33691EFF	#F28705FF	#8FBD77FF	#84AD83FF	#00CD00	#779D8DFF	#577F9FFF	#00EE00	#F29F05FF	#F2B705FF	#3E71A8FF	#698E96FF
+LEGEND_LABELS	Alishewanella_f	Alteromonadaceae	Bacillaceae	Cellvibrionaceae	Colwelliaceae	Dermabacteraceae	Enterobacteriaceae	Flavobacteriaceae	Marinobacteraceae	Microbacteriaceae	Micrococcaceae	Moraxellaceae	Nocardiaceae	Oceanospirillaceae	Planococcaceae	Pseudoalteromonadaceae	Pseudomonadaceae	Rhodobacteraceae	Saccharospirillaceae	Shewanellaceae	Sphingomonadaceae	Staphylococcaceae	Streptococcaceae	Vibrionaceae	Woeseiaceae
+LEGEND_SHAPES	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+LEGEND_TITLE	Family																								
+MARGIN	5																								
+STRIP_WIDTH	25																								
+DATA																									
+HQB-10	#D95204FF	Bacillaceae																							
+HQB-107	#84AD83FF	Pseudomonadaceae																							
+HQB-110	#8BC34AFF	Colwelliaceae																							
+HQB-111	#3E71A8FF	Vibrionaceae																							
+HQB-114	#3E71A8FF	Vibrionaceae																							
+HQB-118	#D95204FF	Bacillaceae																							
+HQB-123	#F29F05FF	Staphylococcaceae																							
+HQB-127	#D95204FF	Bacillaceae																							
+HQB-136	#577F9FFF	Shewanellaceae																							
+HQB-138	#D95204FF	Bacillaceae																							
+HQB-150	#3E71A8FF	Vibrionaceae																							
+HQB-152	#00CD00	Rhodobacteraceae																							
+HQB-154	#00CD00	Rhodobacteraceae																							
+HQB-162	#577F9FFF	Shewanellaceae																							
+HQB-171	#3E71A8FF	Vibrionaceae																							
+HQB-172	#AED581FF	Alteromonadaceae																							
+HQB-174	#3E71A8FF	Vibrionaceae																							
+HQB-177	#00CD00	Rhodobacteraceae																							
+HQB-179	#00EE00	Sphingomonadaceae																							
+HQB-180	#4F94CD	Flavobacteriaceae																							
+HQB-181	#D95204FF	Bacillaceae																							
+HQB-187	#8FBD77FF	Pseudoalteromonadaceae																							
+HQB-19	#3E71A8FF	Vibrionaceae																							
+HQB-20	#3E71A8FF	Vibrionaceae																							
+HQB-200	#D95204FF	Bacillaceae																							
+HQB-21	#3E71A8FF	Vibrionaceae																							
+HQB-22	#3E71A8FF	Vibrionaceae																							
+HQB-226	#C5E1A5FF	Alishewanella_f																							
+HQB-240	#AED581FF	Alteromonadaceae																							
+HQB-263	#F28705FF	Planococcaceae																							
+HQB-267	#00CD00	Rhodobacteraceae																							
+HQB-279	#00CD00	Rhodobacteraceae																							
+HQB-281	#689F38FF	Marinobacteraceae																							
+HQB-294	#00CD00	Rhodobacteraceae																							
+HQB-323	#00CD00	Rhodobacteraceae																							
+HQB-325	#AFB42BFF	Microbacteriaceae																							
+HQB-332	#9E9D24FF	Dermabacteraceae																							
+HQB-34	#8FBD77FF	Pseudoalteromonadaceae																							
+HQB-345	#3E71A8FF	Vibrionaceae																							
+HQB-347	#33691EFF	Oceanospirillaceae																							
+HQB-355	#4F94CD	Flavobacteriaceae																							
+HQB-361	#558B2FFF	Moraxellaceae																							
+HQB-372	#558B2FFF	Moraxellaceae																							
+HQB-39	#3E71A8FF	Vibrionaceae																							
+HQB-399	#779D8DFF	Saccharospirillaceae																							
+HQB-410	#3E71A8FF	Vibrionaceae																							
+HQB-423	#F28705FF	Planococcaceae																							
+HQB-428	#9CCC65FF	Cellvibrionaceae																							
+HQB-429	#84AD83FF	Pseudomonadaceae																							
+HQB-440	#8BC34AFF	Colwelliaceae																							
+HQB-452	#AFB42BFF	Microbacteriaceae																							
+HQB-458	#DCE775FF	Nocardiaceae																							
+HQB-46	#577F9FFF	Shewanellaceae																							
+HQB-464	#C0CA33FF	Micrococcaceae																							
+HQB-465	#AFB42BFF	Microbacteriaceae																							
+HQB-471	#3E71A8FF	Vibrionaceae																							
+HQB-473	#558B2FFF	Moraxellaceae																							
+HQB-476	#698E96FF	Woeseiaceae																							
+HQB-484	#D95204FF	Bacillaceae																							
+HQB-491	#84AD83FF	Pseudomonadaceae																							
+HQB-497	#F2B705FF	Streptococcaceae																							
+HQB-498	#C0CA33FF	Micrococcaceae																							
+HQB-5	#577F9FFF	Shewanellaceae																							
+HQB-55	#33691EFF	Oceanospirillaceae																							
+HQB-70	#8BC34AFF	Colwelliaceae																							
+HQB-75	#8FBD77FF	Pseudoalteromonadaceae																							
+HQB-76	#577F9FFF	Shewanellaceae																							
+HQB-86	#577F9FFF	Shewanellaceae																							
+HQB-88	#577F9FFF	Shewanellaceae																							
+HQB-90	#577F9FFF	Shewanellaceae																							
+HQB-91	#3E71A8FF	Vibrionaceae																							
+HQB-94	#D95204FF	Bacillaceae																							
+HQB-99	#D95204FF	Bacillaceae																							
+OP50	#7CB342FF	Enterobacteriaceae																							
