@@ -1,6 +1,6 @@
 Fig. 1.R
 =================
-Fig. 1, 
-Fig. S1, 
-Fig. S2, 
+Fig. 1<br /> 
+Fig. S1<br />
+Fig. S2<br />
 Fig. S3
