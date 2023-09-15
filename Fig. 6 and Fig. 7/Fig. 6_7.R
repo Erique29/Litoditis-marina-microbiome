@@ -1855,7 +1855,8 @@ pheatmap(dt1, cluster_cols = F, cluster_rows = T,
 
 #Fig. 6d
 library(readxl)
-data <- read_excel("input/HQBiome_lifespan_F23.xlsx",sheet = 5)
+library(rstatix)
+data <- read_excel("input/HQBiome_lifespan_F23.xlsx",sheet = '!3GROUP-f23')
 #lifespan
 shapiro.test(data$lifespan) 
 bartlett.test(lifespan ~ GROUP, data = data)   
@@ -1895,7 +1896,7 @@ library(ggsurvfit)
 library(gghighlight)
 library(tidycmprsk)
 library(paletteer) 
-data2 <- read_excel("input/HQBiome_lifespan_F23.xlsx",sheet = 6)
+data2 <- read_excel("input/HQBiome_lifespan_F23.xlsx",sheet = '!ggsurvfit-f23')
 data2$group<-factor(data2$group,levels=c('HQBiome','Group1','Group2'))
 #group1 and group2 and HQbiome
 #Fig. 6f
