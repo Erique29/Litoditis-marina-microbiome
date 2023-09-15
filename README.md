@@ -1,5 +1,6 @@
-# Litoditis-marina-microbiome
-Scripts of "The marine environmental microbiome mediates physiological outcomes in host nematodes"
+Github repository for
+
+The marine environmental microbiome mediates physiological outcomes in host nematodes
 
 Fig. 1.R:
 Fig. 1
