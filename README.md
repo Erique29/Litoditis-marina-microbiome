@@ -24,8 +24,7 @@ Conclusions
 Given that both bacteria and marine nematodes are dominant taxa in sedimentary ecosystems, the resource presented here will provide novel insights to identify mechanisms underpinning how habitat bacteria affect nematode biology in a more natural context. Our integrative approach will provide a microbe–nematodes framework for microbiome mediated effects on host animal fitness.
 
 
-<br />
-<br />
+
 Fig. 1.R
 ---------------------------------------------------------------------------------------
 Fig. 1<br />
