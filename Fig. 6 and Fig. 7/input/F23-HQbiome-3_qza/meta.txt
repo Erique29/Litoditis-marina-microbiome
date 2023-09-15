@@ -1,0 +1,12 @@
+sample	order	name	group	merge
+Inoculum	1	Inoculum-1	Inoculum	Inoculum
+gut1	2	gut1	Microbiota	F23-gut-day3
+gut2	3	gut2	Microbiota	F23-gut-day3
+gut3	4	gut3	Microbiota	F23-gut-day3
+gut4	5	gut4	Microbiota	F23-gut-day3
+gut5	6	gut5	Microbiota	F23-gut-day3
+lawn1	7	lawn1	Lawn	F23-lawn-day3
+lawn2	8	lawn2	Lawn	F23-lawn-day3
+lawn3	9	lawn3	Lawn	F23-lawn-day3
+lawn4	10	lawn4	Lawn	F23-lawn-day3
+lawn5	11	lawn5	Lawn	F23-lawn-day3

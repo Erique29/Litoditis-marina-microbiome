@@ -1,0 +1,7 @@
+sample	order	name	group	merge
+F1.4	1	F1.4	Microbiota-F23	F23-gut-day1
+F1.5	2	F1.5	Microbiota-F23	F23-gut-day1
+F5.4	3	F5.4	Microbiota-F23	F23-gut-day5
+F5.5	4	F5.5	Microbiota-F23	F23-gut-day5
+F5.6	5	F5.6	Microbiota-F23	F23-gut-day5
+F5.7	6	F5.7	Microbiota-F23	F23-gut-day5

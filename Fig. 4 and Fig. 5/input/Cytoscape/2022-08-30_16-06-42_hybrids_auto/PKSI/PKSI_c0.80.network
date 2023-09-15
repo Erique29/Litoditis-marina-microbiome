@@ -1,0 +1,5 @@
+Clustername 1	Clustername 2	Raw distance	Squared similarity	Jaccard index	DSS index	Adjacency index	raw DSS non-anchor	raw DSS anchor	Non-anchor domains	Anchor domains	Combined group	Shared group
+HQB-347_c00002_NODE_2_...region001	HQB-347_c00002_NODE_2_...region001	0	1	1	1	1	0	0	1	1		
+HQB-458_Chr1.region006	HQB-458_Chr1.region006	0	1	1	1	1	0	0	1	1		
+HQB-267_c00006_NODE_6_...region003	HQB-267_c00006_NODE_6_...region003	0	1	1	1	1	0	0	1	1		
+HQB-458_Chr1.region008	HQB-458_Chr1.region008	0	1	1	1	1	0	0	1	1		

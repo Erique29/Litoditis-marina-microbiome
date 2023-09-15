@@ -1,0 +1,6 @@
+sample	order	name	group	merge
+gut1	1	gut1	Microbiota	N2-gut-day5
+gut4	2	gut4	Microbiota	N2-gut-day5
+lawn1	3	lawn1	Lawn	N2-lawn-day5
+lawn2	4	lawn2	Lawn	N2-lawn-day5
+lawn3	5	lawn3	Lawn	N2-lawn-day5

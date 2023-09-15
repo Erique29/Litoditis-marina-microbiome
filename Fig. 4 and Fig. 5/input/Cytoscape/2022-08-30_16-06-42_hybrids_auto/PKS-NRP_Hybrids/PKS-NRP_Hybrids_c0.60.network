@@ -1,0 +1,6 @@
+Clustername 1	Clustername 2	Raw distance	Squared similarity	Jaccard index	DSS index	Adjacency index	raw DSS non-anchor	raw DSS anchor	Non-anchor domains	Anchor domains	Combined group	Shared group
+HQB-152_Chr1.region004	HQB-154_Chr1.region002	0.489780455827713	0.26032397150993347	0.6333333253860474	0.5390803813934326	0.40789473056793213	0.4766155779361725	0.24902433156967163	54	4	T1PKS.NRPS-like - T1PKS.NRPS-like	T1PKS.NRPS-like
+HQB-279_c00008_NODE_8_...region001	HQB-279_c00008_NODE_8_...region001	0	1	1	1	1	0	0	1	1		
+HQB-200_c00002_NODE_2_...region002	HQB-200_c00002_NODE_2_...region002	0	1	1	1	1	0	0	1	1		
+HQB-323_Chr1.region006	HQB-323_Chr1.region006	0	1	1	1	1	0	0	1	1		
+HQB-107_c00002_NODE_2_...region002	HQB-107_c00002_NODE_2_...region002	0	1	1	1	1	0	0	1	1		
