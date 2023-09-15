@@ -1,52 +1,57 @@
 # Litoditis-marina-microbiome
-Scripts of "Natural bacteria modulate the development and longevity of a marine nematode Litoditis marina"
+Scripts of "The marine environmental microbiome mediates physiological outcomes in host nematodes"
 
 Fig. 1.R:
-
-Fig. 1a-d, 
-Supplementary Fig. 1, 
-Supplementary Fig. 2, 
-Supplementary Fig. 3, 
-Supplementary Fig. 4.
+Fig. 1
+Fig. S1
+Fig. S2
+Fig. S3
 
 Fig. 2.R:
-
-Fig. 2a-c, 
-Supplementary Fig. 5, 
-Supplementary Fig. 6, 
-Supplementary Fig. 7, 
-Supplementary Fig. 8, 
-Supplementary Fig. 19, 
-Supplementary Fig. 21, 
-Supplementary Fig. 22.
+Fig. 2
+Fig. S4
+Fig. S5
+Fig. S6
+Fig. S7
+Fig. S17 
+Fig. S25
+Fig. S26
+Fig. S29
 
 Fig. 3.R:
+Fig. 3
+Fig. S8
+Fig. S9
+Fig. S10
+Fig. S11
+Fig. S23
+Fig. S24
+Fig. S27
+Fig. S28
+Fig. S30
+Fig. S31
+Fig. S32
+Fig. S33
+Fig. S36
+Fig. S37
 
-Fig. 3ab, 
-Supplementary Fig. 10, 
-Supplementary Fig. 13, 
-Supplementary Fig. 26, 
-Supplementary Fig. 20, 
-Supplementary Fig. 11, 
-Supplementary Fig. 24, 
-Supplementary Fig. 25, 
-Supplementary Fig. 12.
+Fig. 4_5.R:
+Fig. 4
+Fig. 5
+Fig. S12
+Fig. S13
+Fig. S14
+Fig. S15
+Fig. S16
+Fig. S18
+Fig. S19
+Fig. S34
+Fig. S35
+Fig. S38
 
-Fig. 4.R:
-
-Fig. 4a-c, 
-Supplementary Fig. 18, 
-Supplementary Fig. 27, 
-Supplementary Fig. 23, 
-Supplementary Fig. 15, 
-Supplementary Fig. 29, 
-Supplementary Fig. 14, 
-Supplementary Fig. 28.
-
-Fig. 5 and Fig. 6.R:
-
-Fig. 5a-d, 
-Fig. 6a-d, 
-Supplementary Fig. 16, 
-Supplementary Fig. 17.
-
+Fig. 6_7.R:
+Fig. 5
+Fig. 6
+Fig. S20
+Fig. S21
+Fig. S22
