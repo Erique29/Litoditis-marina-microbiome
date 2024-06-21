@@ -1014,7 +1014,7 @@ pcoa.plot<-ggplot(points, aes(x=x, y=y, color=`Phylum/Class`, shape=`Gram strain
 pcoa.plot
 corr<-as.data.frame(cor(growth.log,points[,c(1,2)],method = 'spearman')) #pcoa1:mean5, r=0.9546475 p= 2.2e-16; pcoa2:N2 r=0.100027  p= 0.3965
 corr
-#¼ÆËãp value
+#è®¡ç®—p value
 cor.test(growth.log$mean_5,points[,c(1)],method = 'spearman',exact=FALSE)
 cor.test(growth.log$N2,points[,c(2)],method = 'spearman',exact=FALSE)
 cor_get_pval(corr)
@@ -1072,10 +1072,10 @@ p1<-ggplot(df3, aes(x=tax1, y=distance, color=tax1)) +
 p1
 
 library(rstatix)
-#¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤
+#Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·
 shapiro.test(df3$distance)  #W = 0.88302, p-value < 2.2e-16 
 bartlett.test(distance ~ tax1, data = df3) #Bartlett's K-squared = 33.009, df = 3, p-value = 3.206e-07 
-#¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤¡¤
+#Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·Â·
 
 stat_test <- df3 %>% 
   wilcox_test(distance ~ tax1, p.adjust.method = "fdr",alternative = "two.sided") %>% 
@@ -1161,7 +1161,7 @@ figall =ggplot(all.growth_Info,aes(x = d5, y = N2.log)) +
   stat_cor(aes(x = N2.log, y = d5,label = paste(..r.label.., ..p.label.., sep = "~`,`~")), 
            method = "spearman", cor.coef.name = "R[s]", 
            label.x = 10, label.y = -2, size = 4.5)#+ 
-#geom_rect(xmin = 75, xmax = 100, ymin = 5, ymax = 7, size = 0.5, fill = "#00000000", color = "darkgrey", linetype=2 ) #»­¾ØÐÎ
+#geom_rect(xmin = 75, xmax = 100, ymin = 5, ymax = 7, size = 0.5, fill = "#00000000", color = "darkgrey", linetype=2 ) #ç”»çŸ©å½¢
 figall
 ggsave(filename="growth_correlation_all.pdf", plot = figall, width = 6.75, height = 4.25, useDingbats=F)
 
@@ -1174,14 +1174,14 @@ figall_10 =ggplot(all.growth_Info,aes(y = N2.log, x = d10)) +
   #scale_y_continuous(breaks = c(1,3,5,7)) +
   theme(axis.text.x = element_text(angle=0, hjust=0.5, vjust=0.5)) +
   #scale_color_identity()+
-  scale_colour_manual(name = "Phylum / Class", values = cols)+ É«
+  scale_colour_manual(name = "Phylum / Class", values = cols)+ è‰²
   guides(colour = guide_legend(override.aes = list(shape = 15,size=4)))+ 
   ylab("Egg laying time of C. elegans (-log(h))")+
   scale_x_continuous(breaks = c(0,20,40,60,80))+
   stat_cor(aes(x = N2.log, y = d10,label = paste(..r.label.., ..p.label.., sep = "~`,`~")), 
            method = "spearman", cor.coef.name = "R[s]", 
            label.x = 10, label.y = -2, size = 4.5)#+ 
-#geom_rect(xmin = 75, xmax = 100, ymin = 5, ymax = 7, size = 0.5, fill = "#00000000", color = "darkgrey", linetype=2 ) #»­¾ØÐÎ
+#geom_rect(xmin = 75, xmax = 100, ymin = 5, ymax = 7, size = 0.5, fill = "#00000000", color = "darkgrey", linetype=2 ) #ç”»çŸ©å½¢
 figall_10
 
 #day5 and day10
@@ -1238,7 +1238,7 @@ cols <- c(Alphaproteobacteria = "#7CCD7C",Betaproteobacteria = "#308014",Gammapr
 fig74=ggplot(growth_Info,aes(x = mean_5, y = log_N2)) +
   geom_point(aes(color = `Phylum/Class`,shape= `Gram strain`), alpha=1,size = 2) +
   theme_own()+
-  geom_smooth(method="lm", col="darkgrey", se =F)+ #»Ø¹éÏß
+  geom_smooth(method="lm", col="darkgrey", se =F)+ #å›žå½’çº¿
   xlab("Adult rate of F23 in day 5 (%)")+
   #scale_y_continuous(breaks = c(1,3,5,7)) +
   theme(axis.text.x = element_text(angle=0, hjust=0.5, vjust=0.5)) +
@@ -1246,8 +1246,8 @@ fig74=ggplot(growth_Info,aes(x = mean_5, y = log_N2)) +
   scale_colour_manual(name = "Taxanomy", values = cols)+
   ylab("Egg laying time of N2 (1/log(h))")+
   stat_cor(aes(x = log_N2, y = mean_5,label = paste(..r.label.., ..p.label.., sep = "~`,`~")), method = "spearman", cor.coef.name = "rho", 
-           label.x = 30, label.y = 0.5, size = 4.5)#+ #»Ø¹éÏµÊý
-  #geom_rect(xmin = 75, xmax = 100, ymin = 5, ymax = 7, size = 0.5, fill = "#00000000", color = "darkgrey", linetype=2 ) #»­¾ØÐÎ
+           label.x = 30, label.y = 0.5, size = 4.5)#+ #å›žå½’ç³»æ•°
+  #geom_rect(xmin = 75, xmax = 100, ymin = 5, ymax = 7, size = 0.5, fill = "#00000000", color = "darkgrey", linetype=2 ) #ç”»çŸ©å½¢
 fig74
 
 
