@@ -1,6 +1,6 @@
 library(tidyverse) # Data processing
 library(ggplot2) # Plot figures
-library(qiime2R) # QIIME2 artifacts to phyloseq object
+library(qiime2R) # QIIME2 artifacts to phyloseq object 
 library(vegan) # Ecology analysis
 library(phyloseq) # Base microbiome data structure
 library(microbiome) # Microbiome data analysis and visualization
@@ -2069,14 +2069,14 @@ physeq <- physeq %>%
   tax_glom(taxrank = "Genus", NArm = TRUE) # agglomerate on Genus level
 tax_table(physeq) <- tax_table(physeq)[,1:6]
 sample_data(physeq)
-#ÅÅÐò
+#Ã…Ã…ÃÃ²
 physeq@sam_data$group<-factor(physeq@sam_data$group,levels = c('Microbiota','Lawn','Inoculum'))
 
 physeq@sam_data$name <- factor(physeq@sam_data$name, 
                                levels = c( "gut1"))
 
 physeq_all@sam_data$name
-#Add total read counts to each library¡¯s sample data
+#Add total read counts to each libraryÂ¡Â¯s sample data
 #sample_data(physeq)$total_reads <- sample_sums(physeq)
 
 #otu<-as.data.frame(tax_table(physeq))
