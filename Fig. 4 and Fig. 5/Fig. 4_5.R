@@ -1,5 +1,5 @@
 #Fig. 4a
-library(data.table)
+library(data.table) 
 library(dplyr)
 library(ggplot2)
 library(RColorBrewer)
@@ -563,7 +563,7 @@ bartlett.test(lifespan ~ genus, data = data)   # p-value = 0.6421
 shapiro.test(data$d5)  #p-value = 0.0001439    
 bartlett.test(d5 ~ genus, data = data)   #p-value < 0.05823    
 
-#tºÏ—È---lifespan 
+#tÊ£ÄÈ™å---lifespan 
 data %>%     
   t_test(lifespan ~ genus, paired = F) #0.0265
 
@@ -666,7 +666,7 @@ ggsave('sur1.pdf',surcical1,width = 7,height = 3)
 #   #              combine_groups=F)+
 #   add_quantile(color ="grey80",size=0.8,linetype =5)+theme_classic()+
 #   labs(y = "Percentage Survival",x='Day')+
-#   add_pvalue(caption = "Log-rank {p.value}",location  = "annotation", x = 15)+  #ÃÌº”P÷µ---log rank
+#   add_pvalue(caption = "Log-rank {p.value}",location  = "annotation", x = 15)+  #Ê∑ªÂä†PÂÄº---log rank
 #   scale_color_manual(values = c('#009292FF','#F9791EFF'))+
 #   scale_fill_manual(values = c('#009292FF','#F9791EFF'))+
 #   scale_x_continuous(breaks = seq(0, 30, by = 1))
@@ -951,7 +951,7 @@ data_N2$p.growth=stat_growth[as.character(data_N2$group),]$groups
 shapiro.test(data_N2$lifespan)  #  p-value = 0.03428   
 bartlett.test(lifespan ~ genus, data = data_N2)   # p-value = 0.08648  
 
-#growth-f23 ---------≤ª’˝Ã´,∑Ω≤Ó∆Î
+#growth-f23 ---------‰∏çÊ≠£Â§™,ÊñπÂ∑ÆÈΩê
 shapiro.test(data_N2$egg)  #p-value = 2.898e-10 
 bartlett.test(egg ~ genus, data = data_N2)   #p-value=0.4491 
 
@@ -1053,7 +1053,7 @@ surcical2<-survfit2(Surv(time, status) ~ genus, data = data2) %>%
   #              combine_groups=F)+
   add_quantile(color ="grey80",size=0.8,linetype =5)+theme_classic()+
   labs(y = "Percentage Survival",x='Day')+
-  add_pvalue(caption = "Log-rank {p.value}",location  = "annotation", x = 15)+  #ÃÌº”P÷µ---log rank
+  add_pvalue(caption = "Log-rank {p.value}",location  = "annotation", x = 15)+  #Ê∑ªÂä†PÂÄº---log rank
   scale_color_manual(values = c('#009292FF','#F9791EFF'))+
   scale_fill_manual(values = c('#009292FF','#F9791EFF'))+
   scale_x_continuous(breaks = seq(0, 38, by = 1))
@@ -2169,7 +2169,7 @@ OP50_f23<-read_excel("input/mutants.xlsx",sheet = 'OP50_1_plot')
 #day3
 OP50_D3<-OP50_f23[,c('strain','REP','D3','color','line')]
 #only mutants
-OP50_D3_mutants<-OP50_D3 %>% filter(strain %in% c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+OP50_D3_mutants<-OP50_D3 %>% filter(strain %in% c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 
 #Dunnett test
 library(DescTools)
@@ -2177,9 +2177,9 @@ library(DescTools)
 DunnettTest(x=OP50_D3_mutants$D3, g=OP50_D3_mutants$strain, control = 'WT')
 #$WT
 # diff     lwr.ci     upr.ci    pval    
-# ¶§adhE-WT -0.34 -0.4222174 -0.2577826 1.7e-07 ***
-#   ¶§hemF-WT -0.33 -0.4069073 -0.2530927 2.7e-06 ***
-#   ¶§ubiG-WT -0.40 -0.4822174 -0.3177826 1.4e-09 ***
+# ŒîadhE-WT -0.34 -0.4222174 -0.2577826 1.7e-07 ***
+#   ŒîhemF-WT -0.33 -0.4069073 -0.2530927 2.7e-06 ***
+#   ŒîubiG-WT -0.40 -0.4822174 -0.3177826 1.4e-09 ***
 
 #
 
@@ -2189,10 +2189,10 @@ library(ggpubr)
 library(paletteer) 
 
 OP50_D3$strain<-factor(OP50_D3$strain,levels=c('WT','WT+CoQ','WT+heme','WT+CoA',
-                                               '¶§ubiG','¶§ubiG+CoQ',
-                                               '¶§hemF','¶§hemF+heme',
-                                               '¶§adhE','¶§adhE+CoA'))
-OP50_D3$color<-factor(OP50_D3$color,levels=c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+                                               'ŒîubiG','ŒîubiG+CoQ',
+                                               'ŒîhemF','ŒîhemF+heme',
+                                               'ŒîadhE','ŒîadhE+CoA'))
+OP50_D3$color<-factor(OP50_D3$color,levels=c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 OP50_D3$line<-factor(OP50_D3$line,levels=c('solid','dashed'))
 #day3
 OP50_day3<-ggboxplot(
@@ -2210,24 +2210,24 @@ ggsave('op50/OP50_day3.pdf',OP50_day3,width = 6,height = 4)
 #day4
 OP50_D4<-OP50_f23[,c('strain','REP','D4','color','line')]
 #only mutants
-OP50_D4_mutants<-OP50_D4 %>% filter(strain %in% c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+OP50_D4_mutants<-OP50_D4 %>% filter(strain %in% c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 
 #Dunnett test
 #day4
 DunnettTest(x=OP50_D4_mutants$D4, g=OP50_D4_mutants$strain, control = 'WT')
 #$WT
 # diff    lwr.ci     upr.ci    pval    
-# ¶§adhE-WT -27.33333 -48.04302  -6.623649 0.01235 *  
-# ¶§hemF-WT -20.66667 -40.03880  -1.294531 0.03744 *  
-# ¶§ubiG-WT -45.33333 -66.04302 -24.623649 0.00045 ***
+# ŒîadhE-WT -27.33333 -48.04302  -6.623649 0.01235 *  
+# ŒîhemF-WT -20.66667 -40.03880  -1.294531 0.03744 *  
+# ŒîubiG-WT -45.33333 -66.04302 -24.623649 0.00045 ***
 
 #===============================
 #plot
 OP50_D4$strain<-factor(OP50_D4$strain,levels=c('WT','WT+CoQ','WT+heme','WT+CoA',
-                                               '¶§ubiG','¶§ubiG+CoQ',
-                                               '¶§hemF','¶§hemF+heme',
-                                               '¶§adhE','¶§adhE+CoA'))
-OP50_D4$color<-factor(OP50_D4$color,levels=c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+                                               'ŒîubiG','ŒîubiG+CoQ',
+                                               'ŒîhemF','ŒîhemF+heme',
+                                               'ŒîadhE','ŒîadhE+CoA'))
+OP50_D4$color<-factor(OP50_D4$color,levels=c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 OP50_D4$line<-factor(OP50_D4$line,levels=c('solid','dashed'))
 #day4
 OP50_day4<-ggboxplot(
@@ -2244,24 +2244,24 @@ OP50_day4
 #day5
 OP50_D5<-OP50_f23[,c('strain','REP','D5','color','line')]
 #only mutants
-OP50_D5_mutants<-OP50_D5 %>% filter(strain %in% c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+OP50_D5_mutants<-OP50_D5 %>% filter(strain %in% c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 
 #Dunnett test
 #day5
 DunnettTest(x=OP50_D5_mutants$D5, g=OP50_D5_mutants$strain, control = 'WT')
 #$WT
 # diff    lwr.ci    upr.ci   pval    
-# ¶§adhE-WT -18.00000 -43.12169  7.121687 0.1708    
-# ¶§hemF-WT -12.83333 -36.33252 10.665853 0.3385    
-# ¶§ubiG-WT -32.66667 -57.78835 -7.544980 0.0134 * 
+# ŒîadhE-WT -18.00000 -43.12169  7.121687 0.1708    
+# ŒîhemF-WT -12.83333 -36.33252 10.665853 0.3385    
+# ŒîubiG-WT -32.66667 -57.78835 -7.544980 0.0134 * 
 
 #===============================
 #plot
 OP50_D5$strain<-factor(OP50_D5$strain,levels=c('WT','WT+CoQ','WT+heme','WT+CoA',
-                                               '¶§ubiG','¶§ubiG+CoQ',
-                                               '¶§hemF','¶§hemF+heme',
-                                               '¶§adhE','¶§adhE+CoA'))
-OP50_D5$color<-factor(OP50_D5$color,levels=c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+                                               'ŒîubiG','ŒîubiG+CoQ',
+                                               'ŒîhemF','ŒîhemF+heme',
+                                               'ŒîadhE','ŒîadhE+CoA'))
+OP50_D5$color<-factor(OP50_D5$color,levels=c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 OP50_D5$line<-factor(OP50_D5$line,levels=c('solid','dashed'))
 #day5
 OP50_day5<-ggboxplot(
@@ -2278,26 +2278,26 @@ OP50_day5
 #day6
 OP50_D6<-OP50_f23[,c('strain','REP','D6','color','line')]
 #only mutants
-OP50_D6_mutants<-OP50_D6 %>% filter(strain %in% c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+OP50_D6_mutants<-OP50_D6 %>% filter(strain %in% c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 
 #Dunnett test
 #day6
 DunnettTest(x=OP50_D6_mutants$D6, g=OP50_D6_mutants$strain, control = 'WT')
 #$WT
 # diff    lwr.ci    upr.ci   pval    
-# ¶§adhE-WT -13.33333 -34.19720  7.530537 0.2351    
-# ¶§hemF-WT -10.16667 -29.68303  9.349697 0.3716    
-# ¶§ubiG-WT -25.33333 -46.19720 -4.469463 0.0192 *  
+# ŒîadhE-WT -13.33333 -34.19720  7.530537 0.2351    
+# ŒîhemF-WT -10.16667 -29.68303  9.349697 0.3716    
+# ŒîubiG-WT -25.33333 -46.19720 -4.469463 0.0192 *  
 #ubiG t test
-OP50_D6_ubiG<-OP50_D6 %>% filter(strain %in% c('¶§ubiG','¶§ubiG+CoQ'))
+OP50_D6_ubiG<-OP50_D6 %>% filter(strain %in% c('ŒîubiG','ŒîubiG+CoQ'))
 OP50_D6_ubiG %>% t_test(D6 ~ line)  # p=0.946
 #===============================
 #plot
 OP50_D6$strain<-factor(OP50_D6$strain,levels=c('WT','WT+CoQ','WT+heme','WT+CoA',
-                                               '¶§ubiG','¶§ubiG+CoQ',
-                                               '¶§hemF','¶§hemF+heme',
-                                               '¶§adhE','¶§adhE+CoA'))
-OP50_D6$color<-factor(OP50_D6$color,levels=c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+                                               'ŒîubiG','ŒîubiG+CoQ',
+                                               'ŒîhemF','ŒîhemF+heme',
+                                               'ŒîadhE','ŒîadhE+CoA'))
+OP50_D6$color<-factor(OP50_D6$color,levels=c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 OP50_D6$line<-factor(OP50_D6$line,levels=c('solid','dashed'))
 
 OP50_day6<-ggboxplot(
@@ -2314,26 +2314,26 @@ OP50_day6
 #day7
 OP50_D7<-OP50_f23[,c('strain','REP','D7','color','line')]
 #only mutants
-OP50_D7_mutants<-OP50_D7 %>% filter(strain %in% c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+OP50_D7_mutants<-OP50_D7 %>% filter(strain %in% c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 
 #Dunnett test
 #day7
 DunnettTest(x=OP50_D7_mutants$D7, g=OP50_D7_mutants$strain, control = 'WT')
 #$WT
 # diff    lwr.ci    upr.ci   pval    
-# ¶§adhE-WT  -8.666667 -29.38104 12.047707 0.5288    
-# ¶§hemF-WT  -7.166667 -26.54319 12.209855 0.6130    
-# ¶§ubiG-WT -18.000000 -38.71437  2.714373 0.0892 . 
+# ŒîadhE-WT  -8.666667 -29.38104 12.047707 0.5288    
+# ŒîhemF-WT  -7.166667 -26.54319 12.209855 0.6130    
+# ŒîubiG-WT -18.000000 -38.71437  2.714373 0.0892 . 
 #ubiG t test
-OP50_D7_ubiG<-OP50_D7 %>% filter(strain %in% c('¶§ubiG','¶§ubiG+CoQ'))
+OP50_D7_ubiG<-OP50_D7 %>% filter(strain %in% c('ŒîubiG','ŒîubiG+CoQ'))
 OP50_D7_ubiG %>% t_test(D7 ~ line)  # p= 0.71
 #===============================
 #plot
 OP50_D7$strain<-factor(OP50_D7$strain,levels=c('WT','WT+CoQ','WT+heme','WT+CoA',
-                                               '¶§ubiG','¶§ubiG+CoQ',
-                                               '¶§hemF','¶§hemF+heme',
-                                               '¶§adhE','¶§adhE+CoA'))
-OP50_D7$color<-factor(OP50_D7$color,levels=c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+                                               'ŒîubiG','ŒîubiG+CoQ',
+                                               'ŒîhemF','ŒîhemF+heme',
+                                               'ŒîadhE','ŒîadhE+CoA'))
+OP50_D7$color<-factor(OP50_D7$color,levels=c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 OP50_D7$line<-factor(OP50_D7$line,levels=c('solid','dashed'))
 
 OP50_day7<-ggboxplot(
@@ -2350,27 +2350,27 @@ OP50_day7
 #day8
 OP50_D8<-OP50_f23[,c('strain','REP','D8','color','line')]
 #only mutants
-OP50_D8_mutants<-OP50_D8 %>% filter(strain %in% c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+OP50_D8_mutants<-OP50_D8 %>% filter(strain %in% c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 
 #Dunnett test
 #day8
 DunnettTest(x=OP50_D8_mutants$D8, g=OP50_D8_mutants$strain, control = 'WT')
 #$WT
 # diff    lwr.ci    upr.ci   pval    
-# ¶§adhE-WT  -8.666667 -28.69450 11.361167 0.5049    
-# ¶§hemF-WT  -6.166667 -24.90099 12.567656 0.6855    
-# ¶§ubiG-WT -14.000000 -34.02783  6.027833 0.1842 
+# ŒîadhE-WT  -8.666667 -28.69450 11.361167 0.5049    
+# ŒîhemF-WT  -6.166667 -24.90099 12.567656 0.6855    
+# ŒîubiG-WT -14.000000 -34.02783  6.027833 0.1842 
 #ubiG t test
-OP50_D8_ubiG<-OP50_D8 %>% filter(strain %in% c('¶§ubiG','¶§ubiG+CoQ'))
+OP50_D8_ubiG<-OP50_D8 %>% filter(strain %in% c('ŒîubiG','ŒîubiG+CoQ'))
 OP50_D8_ubiG %>% t_test(D8 ~ line)  # p= 0.69
 
 #===============================
 #plot
 OP50_D8$strain<-factor(OP50_D8$strain,levels=c('WT','WT+CoQ','WT+heme','WT+CoA',
-                                               '¶§ubiG','¶§ubiG+CoQ',
-                                               '¶§hemF','¶§hemF+heme',
-                                               '¶§adhE','¶§adhE+CoA'))
-OP50_D8$color<-factor(OP50_D8$color,levels=c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+                                               'ŒîubiG','ŒîubiG+CoQ',
+                                               'ŒîhemF','ŒîhemF+heme',
+                                               'ŒîadhE','ŒîadhE+CoA'))
+OP50_D8$color<-factor(OP50_D8$color,levels=c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 OP50_D8$line<-factor(OP50_D8$line,levels=c('solid','dashed'))
 
 OP50_day8<-ggboxplot(
@@ -2387,27 +2387,27 @@ OP50_day8
 #day9
 OP50_D9<-OP50_f23[,c('strain','REP','D9','color','line')]
 #only mutants
-OP50_D9_mutants<-OP50_D9 %>% filter(strain %in% c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+OP50_D9_mutants<-OP50_D9 %>% filter(strain %in% c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 
 #Dunnett test
 #day9
 DunnettTest(x=OP50_D9_mutants$D9, g=OP50_D9_mutants$strain, control = 'WT')
 #$WT
 # diff    lwr.ci   upr.ci   pval    
-# ¶§adhE-WT  -9.333333 -27.09978 8.433115 0.3659    
-# ¶§hemF-WT  -6.833333 -23.45232 9.785658 0.5410    
-# ¶§ubiG-WT -13.333333 -31.09978 4.433115 0.1482    
+# ŒîadhE-WT  -9.333333 -27.09978 8.433115 0.3659    
+# ŒîhemF-WT  -6.833333 -23.45232 9.785658 0.5410    
+# ŒîubiG-WT -13.333333 -31.09978 4.433115 0.1482    
 #ubiG t test
-OP50_D9_ubiG<-OP50_D9 %>% filter(strain %in% c('¶§ubiG','¶§ubiG+CoQ'))
+OP50_D9_ubiG<-OP50_D9 %>% filter(strain %in% c('ŒîubiG','ŒîubiG+CoQ'))
 OP50_D9_ubiG %>% t_test(D9 ~ line)  # p= 0.599
 
 #===============================
 #plot
 OP50_D9$strain<-factor(OP50_D9$strain,levels=c('WT','WT+CoQ','WT+heme','WT+CoA',
-                                               '¶§ubiG','¶§ubiG+CoQ',
-                                               '¶§hemF','¶§hemF+heme',
-                                               '¶§adhE','¶§adhE+CoA'))
-OP50_D9$color<-factor(OP50_D9$color,levels=c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+                                               'ŒîubiG','ŒîubiG+CoQ',
+                                               'ŒîhemF','ŒîhemF+heme',
+                                               'ŒîadhE','ŒîadhE+CoA'))
+OP50_D9$color<-factor(OP50_D9$color,levels=c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 OP50_D9$line<-factor(OP50_D9$line,levels=c('solid','dashed'))
 
 OP50_day9<-ggboxplot(
@@ -2424,27 +2424,27 @@ OP50_day9
 #day10
 OP50_D10<-OP50_f23[,c('strain','REP','D10','color','line')]
 #only mutants
-OP50_D10_mutants<-OP50_D10 %>% filter(strain %in% c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+OP50_D10_mutants<-OP50_D10 %>% filter(strain %in% c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 
 #Dunnett test
 #day10
 DunnettTest(x=OP50_D10_mutants$D10, g=OP50_D10_mutants$strain, control = 'WT')
 #$WT
 # diff    lwr.ci   upr.ci   pval    
-# ¶§adhE-WT  -9.333333 -27.09978 8.433115 0.3657    
-# ¶§hemF-WT  -6.833333 -23.45232 9.785658 0.5410    
-# ¶§ubiG-WT -13.333333 -31.09978 4.433115 0.1484   
+# ŒîadhE-WT  -9.333333 -27.09978 8.433115 0.3657    
+# ŒîhemF-WT  -6.833333 -23.45232 9.785658 0.5410    
+# ŒîubiG-WT -13.333333 -31.09978 4.433115 0.1484   
 #ubiG t test
-OP50_D10_ubiG<-OP50_D10 %>% filter(strain %in% c('¶§ubiG','¶§ubiG+CoQ'))
+OP50_D10_ubiG<-OP50_D10 %>% filter(strain %in% c('ŒîubiG','ŒîubiG+CoQ'))
 OP50_D10_ubiG %>% t_test(D10 ~ line)  # p= 0.599
 
 #===============================
 #plot
 OP50_D10$strain<-factor(OP50_D10$strain,levels=c('WT','WT+CoQ','WT+heme','WT+CoA',
-                                                 '¶§ubiG','¶§ubiG+CoQ',
-                                                 '¶§hemF','¶§hemF+heme',
-                                                 '¶§adhE','¶§adhE+CoA'))
-OP50_D10$color<-factor(OP50_D10$color,levels=c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+                                                 'ŒîubiG','ŒîubiG+CoQ',
+                                                 'ŒîhemF','ŒîhemF+heme',
+                                                 'ŒîadhE','ŒîadhE+CoA'))
+OP50_D10$color<-factor(OP50_D10$color,levels=c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 OP50_D10$line<-factor(OP50_D10$line,levels=c('solid','dashed'))
 
 OP50_day10<-ggboxplot(
@@ -2464,7 +2464,7 @@ OP50_f23.2<-read_excel("input/mutants.xlsx",sheet = 'OP50_2_plot')
 #day3
 OP50_D3.2<-OP50_f23.2[,c('strain','REP','D3','color','line')]
 #only mutants
-OP50_D3.2_mutants<-OP50_D3.2 %>% filter(strain %in% c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+OP50_D3.2_mutants<-OP50_D3.2 %>% filter(strain %in% c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 
 #Dunnett test
 library(DescTools)
@@ -2472,18 +2472,18 @@ library(DescTools)
 DunnettTest(x=OP50_D3.2_mutants$D3, g=OP50_D3.2_mutants$strain, control = 'WT')
 #$WT
 # diff    lwr.ci    upr.ci    pval    
-# ¶§adhE-WT -29.33333 -35.82571 -22.84096 2.6e-09 ***
-# ¶§hemF-WT -35.83333 -41.90640 -29.76027 9.4e-11 ***
-# ¶§ubiG-WT -38.66667 -45.15904 -32.17429 1.4e-12 ***
+# ŒîadhE-WT -29.33333 -35.82571 -22.84096 2.6e-09 ***
+# ŒîhemF-WT -35.83333 -41.90640 -29.76027 9.4e-11 ***
+# ŒîubiG-WT -38.66667 -45.15904 -32.17429 1.4e-12 ***
 
 #
 
 #===============================
 OP50_D3.2$strain<-factor(OP50_D3.2$strain,levels=c('WT','WT+CoQ','WT+heme','WT+CoA',
-                                                   '¶§ubiG','¶§ubiG+CoQ',
-                                                   '¶§hemF','¶§hemF+heme',
-                                                   '¶§adhE','¶§adhE+CoA'))
-OP50_D3.2$color<-factor(OP50_D3.2$color,levels=c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+                                                   'ŒîubiG','ŒîubiG+CoQ',
+                                                   'ŒîhemF','ŒîhemF+heme',
+                                                   'ŒîadhE','ŒîadhE+CoA'))
+OP50_D3.2$color<-factor(OP50_D3.2$color,levels=c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 OP50_D3.2$line<-factor(OP50_D3.2$line,levels=c('solid','dashed'))
 #day3
 OP50_day3.2<-ggboxplot(
@@ -2500,7 +2500,7 @@ OP50_day3.2
 #day4
 OP50_D4.2<-OP50_f23.2[,c('strain','REP','D4','color','line')]
 #only mutants
-OP50_D4.2_mutants<-OP50_D4.2 %>% filter(strain %in% c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+OP50_D4.2_mutants<-OP50_D4.2 %>% filter(strain %in% c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 
 #Dunnett test
 library(DescTools)
@@ -2508,18 +2508,18 @@ library(DescTools)
 DunnettTest(x=OP50_D4.2_mutants$D4, g=OP50_D4.2_mutants$strain, control = 'WT')
 #$WT
 # diff    lwr.ci     upr.ci    pval    
-# ¶§adhE-WT -14.66667 -32.30143   2.968096 0.10443    
-# ¶§hemF-WT -32.50000 -48.99581 -16.004190 0.00095 ***
-# ¶§ubiG-WT -52.00000 -69.63476 -34.365238 1.6e-05 ***
+# ŒîadhE-WT -14.66667 -32.30143   2.968096 0.10443    
+# ŒîhemF-WT -32.50000 -48.99581 -16.004190 0.00095 ***
+# ŒîubiG-WT -52.00000 -69.63476 -34.365238 1.6e-05 ***
 
 #
 
 #===============================
 OP50_D4.2$strain<-factor(OP50_D4.2$strain,levels=c('WT','WT+CoQ','WT+heme','WT+CoA',
-                                                   '¶§ubiG','¶§ubiG+CoQ',
-                                                   '¶§hemF','¶§hemF+heme',
-                                                   '¶§adhE','¶§adhE+CoA'))
-OP50_D4.2$color<-factor(OP50_D4.2$color,levels=c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+                                                   'ŒîubiG','ŒîubiG+CoQ',
+                                                   'ŒîhemF','ŒîhemF+heme',
+                                                   'ŒîadhE','ŒîadhE+CoA'))
+OP50_D4.2$color<-factor(OP50_D4.2$color,levels=c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 OP50_D4.2$line<-factor(OP50_D4.2$line,levels=c('solid','dashed'))
 #day4
 OP50_day4.2<-ggboxplot(
@@ -2537,7 +2537,7 @@ OP50_day4.2
 #day5
 OP50_D5.2<-OP50_f23.2[,c('strain','REP','D5','color','line')]
 #only mutants
-OP50_D5.2_mutants<-OP50_D5.2 %>% filter(strain %in% c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+OP50_D5.2_mutants<-OP50_D5.2 %>% filter(strain %in% c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 
 #Dunnett test
 library(DescTools)
@@ -2545,18 +2545,18 @@ library(DescTools)
 DunnettTest(x=OP50_D5.2_mutants$D5, g=OP50_D5.2_mutants$strain, control = 'WT')
 #$WT
 # diff    lwr.ci     upr.ci   pval    
-# ¶§adhE-WT -12.00000 -26.91340   2.913401 0.1176    
-# ¶§hemF-WT -19.50000 -33.45021  -5.549791 0.0088 ** 
-# ¶§ubiG-WT -36.66667 -51.58007 -21.753266 0.0002 ***
+# ŒîadhE-WT -12.00000 -26.91340   2.913401 0.1176    
+# ŒîhemF-WT -19.50000 -33.45021  -5.549791 0.0088 ** 
+# ŒîubiG-WT -36.66667 -51.58007 -21.753266 0.0002 ***
 
 #
 
 #===============================
 OP50_D5.2$strain<-factor(OP50_D5.2$strain,levels=c('WT','WT+CoQ','WT+heme','WT+CoA',
-                                                   '¶§ubiG','¶§ubiG+CoQ',
-                                                   '¶§hemF','¶§hemF+heme',
-                                                   '¶§adhE','¶§adhE+CoA'))
-OP50_D5.2$color<-factor(OP50_D5.2$color,levels=c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+                                                   'ŒîubiG','ŒîubiG+CoQ',
+                                                   'ŒîhemF','ŒîhemF+heme',
+                                                   'ŒîadhE','ŒîadhE+CoA'))
+OP50_D5.2$color<-factor(OP50_D5.2$color,levels=c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 OP50_D5.2$line<-factor(OP50_D5.2$line,levels=c('solid','dashed'))
 #day5
 OP50_day5.2<-ggboxplot(
@@ -2574,7 +2574,7 @@ OP50_day5.2
 #day6
 OP50_D6.2<-OP50_f23.2[,c('strain','REP','D6','color','line')]
 #only mutants
-OP50_D6.2_mutants<-OP50_D6.2 %>% filter(strain %in% c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+OP50_D6.2_mutants<-OP50_D6.2 %>% filter(strain %in% c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 
 #Dunnett test
 library(DescTools)
@@ -2582,18 +2582,18 @@ library(DescTools)
 DunnettTest(x=OP50_D6.2_mutants$D6, g=OP50_D6.2_mutants$strain, control = 'WT')
 #$WT
 # diff    lwr.ci      upr.ci    pval    
-# ¶§adhE-WT  -9.333333 -26.26568   7.5990121 0.33212    
-# ¶§hemF-WT -15.666667 -31.50543   0.1720922 0.05230 .  
-# ¶§ubiG-WT -33.333333 -50.26568 -16.4009879 0.00095 ***
+# ŒîadhE-WT  -9.333333 -26.26568   7.5990121 0.33212    
+# ŒîhemF-WT -15.666667 -31.50543   0.1720922 0.05230 .  
+# ŒîubiG-WT -33.333333 -50.26568 -16.4009879 0.00095 ***
 
 #
 
 #===============================
 OP50_D6.2$strain<-factor(OP50_D6.2$strain,levels=c('WT','WT+CoQ','WT+heme','WT+CoA',
-                                                   '¶§ubiG','¶§ubiG+CoQ',
-                                                   '¶§hemF','¶§hemF+heme',
-                                                   '¶§adhE','¶§adhE+CoA'))
-OP50_D6.2$color<-factor(OP50_D6.2$color,levels=c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+                                                   'ŒîubiG','ŒîubiG+CoQ',
+                                                   'ŒîhemF','ŒîhemF+heme',
+                                                   'ŒîadhE','ŒîadhE+CoA'))
+OP50_D6.2$color<-factor(OP50_D6.2$color,levels=c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 OP50_D6.2$line<-factor(OP50_D6.2$line,levels=c('solid','dashed'))
 #day6
 OP50_day6.2<-ggboxplot(
@@ -2611,7 +2611,7 @@ OP50_day6.2
 #day7
 OP50_D7.2<-OP50_f23.2[,c('strain','REP','D7','color','line')]
 #only mutants
-OP50_D7.2_mutants<-OP50_D7.2 %>% filter(strain %in% c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+OP50_D7.2_mutants<-OP50_D7.2 %>% filter(strain %in% c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 
 #Dunnett test
 library(DescTools)
@@ -2619,18 +2619,18 @@ library(DescTools)
 DunnettTest(x=OP50_D7.2_mutants$D7, g=OP50_D7.2_mutants$strain, control = 'WT')
 # $WT
 # diff    lwr.ci    upr.ci   pval    
-# ¶§adhE-WT  -8.666667 -29.19264 11.859305 0.5224    
-# ¶§hemF-WT -13.833333 -33.03362  5.366955 0.1682    
-# ¶§ubiG-WT -28.666667 -49.19264 -8.140695 0.0091 ** 
+# ŒîadhE-WT  -8.666667 -29.19264 11.859305 0.5224    
+# ŒîhemF-WT -13.833333 -33.03362  5.366955 0.1682    
+# ŒîubiG-WT -28.666667 -49.19264 -8.140695 0.0091 ** 
 
 #
 
 #===============================
 OP50_D7.2$strain<-factor(OP50_D7.2$strain,levels=c('WT','WT+CoQ','WT+heme','WT+CoA',
-                                                   '¶§ubiG','¶§ubiG+CoQ',
-                                                   '¶§hemF','¶§hemF+heme',
-                                                   '¶§adhE','¶§adhE+CoA'))
-OP50_D7.2$color<-factor(OP50_D7.2$color,levels=c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+                                                   'ŒîubiG','ŒîubiG+CoQ',
+                                                   'ŒîhemF','ŒîhemF+heme',
+                                                   'ŒîadhE','ŒîadhE+CoA'))
+OP50_D7.2$color<-factor(OP50_D7.2$color,levels=c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 OP50_D7.2$line<-factor(OP50_D7.2$line,levels=c('solid','dashed'))
 #day7
 OP50_day7.2<-ggboxplot(
@@ -2648,7 +2648,7 @@ OP50_day7.2
 #day8
 OP50_D8.2<-OP50_f23.2[,c('strain','REP','D8','color','line')]
 #only mutants
-OP50_D8.2_mutants<-OP50_D8.2 %>% filter(strain %in% c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+OP50_D8.2_mutants<-OP50_D8.2 %>% filter(strain %in% c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 
 #Dunnett test
 library(DescTools)
@@ -2656,18 +2656,18 @@ library(DescTools)
 DunnettTest(x=OP50_D8.2_mutants$D8, g=OP50_D8.2_mutants$strain, control = 'WT')
 # $WT
 # diff    lwr.ci    upr.ci   pval    
-# ¶§adhE-WT  -8.666667 -27.65907 10.325735 0.4668    
-# ¶§hemF-WT -13.833333 -31.59910  3.932432 0.1315    
-# ¶§ubiG-WT -26.666667 -45.65907 -7.674265 0.0085 ** 
+# ŒîadhE-WT  -8.666667 -27.65907 10.325735 0.4668    
+# ŒîhemF-WT -13.833333 -31.59910  3.932432 0.1315    
+# ŒîubiG-WT -26.666667 -45.65907 -7.674265 0.0085 ** 
 
 #
 
 #===============================
 OP50_D8.2$strain<-factor(OP50_D8.2$strain,levels=c('WT','WT+CoQ','WT+heme','WT+CoA',
-                                                   '¶§ubiG','¶§ubiG+CoQ',
-                                                   '¶§hemF','¶§hemF+heme',
-                                                   '¶§adhE','¶§adhE+CoA'))
-OP50_D8.2$color<-factor(OP50_D8.2$color,levels=c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+                                                   'ŒîubiG','ŒîubiG+CoQ',
+                                                   'ŒîhemF','ŒîhemF+heme',
+                                                   'ŒîadhE','ŒîadhE+CoA'))
+OP50_D8.2$color<-factor(OP50_D8.2$color,levels=c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 OP50_D8.2$line<-factor(OP50_D8.2$line,levels=c('solid','dashed'))
 #day8
 OP50_day8.2<-ggboxplot(
@@ -2686,7 +2686,7 @@ OP50_day8.2
 #day9
 OP50_D9.2<-OP50_f23.2[,c('strain','REP','D9','color','line')]
 #only mutants
-OP50_D9.2_mutants<-OP50_D9.2 %>% filter(strain %in% c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+OP50_D9.2_mutants<-OP50_D9.2 %>% filter(strain %in% c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 
 #Dunnett test
 library(DescTools)
@@ -2695,18 +2695,18 @@ DunnettTest(x=OP50_D9.2_mutants$D9, g=OP50_D9.2_mutants$strain, control = 'WT')
 
 # $WT
 # diff    lwr.ci    upr.ci   pval    
-# ¶§adhE-WT  -8.666667 -28.05885 10.725513 0.4819    
-# ¶§hemF-WT -13.333333 -31.47306  4.806389 0.1583    
-# ¶§ubiG-WT -25.333333 -44.72551 -5.941154 0.0132 * 
+# ŒîadhE-WT  -8.666667 -28.05885 10.725513 0.4819    
+# ŒîhemF-WT -13.333333 -31.47306  4.806389 0.1583    
+# ŒîubiG-WT -25.333333 -44.72551 -5.941154 0.0132 * 
 
 #
 
 #===============================
 OP50_D9.2$strain<-factor(OP50_D9.2$strain,levels=c('WT','WT+CoQ','WT+heme','WT+CoA',
-                                                   '¶§ubiG','¶§ubiG+CoQ',
-                                                   '¶§hemF','¶§hemF+heme',
-                                                   '¶§adhE','¶§adhE+CoA'))
-OP50_D9.2$color<-factor(OP50_D9.2$color,levels=c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+                                                   'ŒîubiG','ŒîubiG+CoQ',
+                                                   'ŒîhemF','ŒîhemF+heme',
+                                                   'ŒîadhE','ŒîadhE+CoA'))
+OP50_D9.2$color<-factor(OP50_D9.2$color,levels=c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 OP50_D9.2$line<-factor(OP50_D9.2$line,levels=c('solid','dashed'))
 #day9
 OP50_day9.2<-ggboxplot(
@@ -2724,7 +2724,7 @@ OP50_day9.2
 #day10
 OP50_D10.2<-OP50_f23.2[,c('strain','REP','D10','color','line')]
 #only mutants
-OP50_D10.2_mutants<-OP50_D10.2 %>% filter(strain %in% c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+OP50_D10.2_mutants<-OP50_D10.2 %>% filter(strain %in% c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 
 #Dunnett test
 library(DescTools)
@@ -2733,18 +2733,18 @@ DunnettTest(x=OP50_D10.2_mutants$D10, g=OP50_D10.2_mutants$strain, control = 'WT
 
 # $WT
 # diff    lwr.ci    upr.ci   pval    
-# ¶§adhE-WT  -8.666667 -28.05885 10.725513 0.4818    
-# ¶§hemF-WT -13.333333 -31.47306  4.806389 0.1584    
-# ¶§ubiG-WT -25.333333 -44.72551 -5.941154 0.0131 * 
+# ŒîadhE-WT  -8.666667 -28.05885 10.725513 0.4818    
+# ŒîhemF-WT -13.333333 -31.47306  4.806389 0.1584    
+# ŒîubiG-WT -25.333333 -44.72551 -5.941154 0.0131 * 
 
 #
 
 #===============================
 OP50_D10.2$strain<-factor(OP50_D10.2$strain,levels=c('WT','WT+CoQ','WT+heme','WT+CoA',
-                                                     '¶§ubiG','¶§ubiG+CoQ',
-                                                     '¶§hemF','¶§hemF+heme',
-                                                     '¶§adhE','¶§adhE+CoA'))
-OP50_D10.2$color<-factor(OP50_D10.2$color,levels=c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+                                                     'ŒîubiG','ŒîubiG+CoQ',
+                                                     'ŒîhemF','ŒîhemF+heme',
+                                                     'ŒîadhE','ŒîadhE+CoA'))
+OP50_D10.2$color<-factor(OP50_D10.2$color,levels=c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 OP50_D10.2$line<-factor(OP50_D10.2$line,levels=c('solid','dashed'))
 #day10
 OP50_day10.2<-ggboxplot(
@@ -2790,25 +2790,25 @@ data.n2_1<-read_excel("input/mutants.xlsx",sheet = 'N2_OP50_1')
 #Dunnett test
 library(DescTools)
 
-mutants_n2.1<-data.n2_1 %>% filter(strain %in% c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+mutants_n2.1<-data.n2_1 %>% filter(strain %in% c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 DunnettTest(x=mutants_n2.1$`Egg-laying time`, g=mutants_n2.1$strain, control = 'WT')
 
 
 #diff     lwr.ci    upr.ci   pval    
 # diff     lwr.ci    upr.ci    pval    
-# ¶§ubiG-WT  1.830000000  1.4903728 2.1696272 2.8e-08 ***
-#   ¶§hemF-WT  1.996666667  1.6570394 2.3362939 1.0e-11 ***
-#   ¶§adhE-WT -0.003333333 -0.3429606 0.3362939  1.0000       
+# ŒîubiG-WT  1.830000000  1.4903728 2.1696272 2.8e-08 ***
+#   ŒîhemF-WT  1.996666667  1.6570394 2.3362939 1.0e-11 ***
+#   ŒîadhE-WT -0.003333333 -0.3429606 0.3362939  1.0000       
 
 #===============================
 library(ggplot2)
 library(ggpubr)
 library(paletteer) 
 data.n2_1$strain<-factor(data.n2_1$strain,levels=c('WT','WT+CoQ','WT+heme','WT+CoA',
-                                                   '¶§ubiG','¶§ubiG+CoQ',
-                                                   '¶§hemF','¶§hemF+heme',
-                                                   '¶§adhE','¶§adhE+CoA'))
-data.n2_1$color<-factor(data.n2_1$color,levels = c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+                                                   'ŒîubiG','ŒîubiG+CoQ',
+                                                   'ŒîhemF','ŒîhemF+heme',
+                                                   'ŒîadhE','ŒîadhE+CoA'))
+data.n2_1$color<-factor(data.n2_1$color,levels = c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 data.n2_1$line<-factor(data.n2_1$line,levels = c('solid','dashed'))
 n2.op50.1<-ggboxplot(
   data.n2_1, x = "strain", y = "`Egg-laying time`",
@@ -2830,16 +2830,16 @@ data.n2_2<-read_excel("input/mutants.xlsx",sheet = 'N2_OP50_2')
 #Dunnett test
 library(DescTools)
 
-mutants_n2.2<-data.n2_2 %>% filter(strain %in% c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+mutants_n2.2<-data.n2_2 %>% filter(strain %in% c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 DunnettTest(x=mutants_n2.2$`Egg-laying time`, g=mutants_n2.2$strain, control = 'WT')
 
 
 #diff     lwr.ci    upr.ci   pval    
 # $WT
 # diff     lwr.ci    upr.ci    pval    
-# ¶§adhE-WT -0.003333333 -0.4811839 0.4745172   1e+00    
-# ¶§hemF-WT  1.830000000  1.3521494 2.3078506   1e-04 ***
-#   ¶§ubiG-WT  1.830000000  1.3521494 2.3078506 3.9e-07 ***
+# ŒîadhE-WT -0.003333333 -0.4811839 0.4745172   1e+00    
+# ŒîhemF-WT  1.830000000  1.3521494 2.3078506   1e-04 ***
+#   ŒîubiG-WT  1.830000000  1.3521494 2.3078506 3.9e-07 ***
 
 
 #===============================
@@ -2847,10 +2847,10 @@ library(ggplot2)
 library(ggpubr)
 library(paletteer) 
 data.n2_2$strain<-factor(data.n2_2$strain,levels=c('WT','WT+CoQ','WT+heme','WT+CoA',
-                                                   '¶§ubiG','¶§ubiG+CoQ',
-                                                   '¶§hemF','¶§hemF+heme',
-                                                   '¶§adhE','¶§adhE+CoA'))
-data.n2_2$color<-factor(data.n2_2$color,levels = c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+                                                   'ŒîubiG','ŒîubiG+CoQ',
+                                                   'ŒîhemF','ŒîhemF+heme',
+                                                   'ŒîadhE','ŒîadhE+CoA'))
+data.n2_2$color<-factor(data.n2_2$color,levels = c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 data.n2_2$line<-factor(data.n2_2$line,levels = c('solid','dashed'))
 n2.op50.2<-ggboxplot(
   data.n2_2, x = "strain", y = "`Egg-laying time`",
@@ -2887,9 +2887,9 @@ curve_1 %>%
          std_error=plotrix::std.error(c(rep1,rep2,rep3))) %>% 
   ungroup() -> new.curve_1
 
-new.curve_1$strain<-factor(new.curve_1$strain,levels=c('WT','¶§ubiG','¶§hemF','¶§adhE',
-                                                       '¶§ubiG+CoQ','¶§hemF+heme','¶§adhE+CoA'))
-new.curve_1$color<-factor(new.curve_1$color,levels=c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+new.curve_1$strain<-factor(new.curve_1$strain,levels=c('WT','ŒîubiG','ŒîhemF','ŒîadhE',
+                                                       'ŒîubiG+CoQ','ŒîhemF+heme','ŒîadhE+CoA'))
+new.curve_1$color<-factor(new.curve_1$color,levels=c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 new.curve_1$line<-factor(new.curve_1$line,levels=c('solid','dashed'))
 
 #plot--cur1
@@ -2935,9 +2935,9 @@ curve_2 %>%
          std_error=plotrix::std.error(c(rep1,rep2,rep3))) %>% 
   ungroup() -> new.curve_2
 
-new.curve_2$strain<-factor(new.curve_2$strain,levels=c('WT','¶§ubiG','¶§hemF','¶§adhE',
-                                                       '¶§ubiG+CoQ','¶§hemF+heme','¶§adhE+CoA'))
-new.curve_2$color<-factor(new.curve_2$color,levels=c('WT','¶§ubiG','¶§hemF','¶§adhE'))
+new.curve_2$strain<-factor(new.curve_2$strain,levels=c('WT','ŒîubiG','ŒîhemF','ŒîadhE',
+                                                       'ŒîubiG+CoQ','ŒîhemF+heme','ŒîadhE+CoA'))
+new.curve_2$color<-factor(new.curve_2$color,levels=c('WT','ŒîubiG','ŒîhemF','ŒîadhE'))
 new.curve_2$line<-factor(new.curve_2$line,levels=c('solid','dashed'))
 
 #plot--cur2
